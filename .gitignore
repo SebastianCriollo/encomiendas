@@ -1,0 +1,15 @@
+# Dependencias y compilados
+node_modules
+dist
+
+# Variables de entorno: NUNCA subir al repositorio
+.env
+.env.*
+!.env.example
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+*.log

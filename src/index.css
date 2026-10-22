@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Tokens de diseño (adaptados de la guía MindMarket) */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --color-crema: #f5f1e4;   /* fondo de página */
+  --color-blanco: #ffffff;  /* tarjetas */
+  --color-arena: #e0dbce;   /* superficie hundida */
+  --color-tinta: #2c2e2a;   /* texto y botón principal */
+  --color-piedra: #6b6d6a;  /* texto secundario (oscurecido para contraste AA) */
+  --color-niebla: #d5d5d4;  /* bordes finos */
+  --color-pasto: #8ed462;   /* marca */
+  --color-cielo: #2ba0ff;
+  --color-coral: #ff705d;
+  --color-sol: #f5e211;
+
+  /* Tintes para chips de estado */
+  --color-cielo-tinte: #ddeeff;
+  --color-sol-tinte: #fbf5be;
+  --color-pasto-tinte: #e4f4d8;
+  --color-coral-tinte: #ffe6e1;
+
+  --radius-tarjeta: 28px;
+  --radius-campo: 18px;
+}
+
+@layer base {
+  html { -webkit-tap-highlight-color: transparent; }
+  body {
+    @apply bg-crema text-tinta font-sans antialiased;
+    font-feature-settings: 'tnum' 1;  /* números tabulares: las cifras se alinean */
+  }
+  input, select, textarea, button { font: inherit; }
+}
+
+/* Número grande del dashboard */
+@utility cifra-grande {
+  font-size: 3.25rem;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+@utility titulo-pagina {
+  font-size: 2rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
